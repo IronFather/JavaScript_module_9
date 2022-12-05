@@ -1,23 +1,18 @@
 // 17 - 8 АСИНХРОННОСТЬ ТАЙМЕР ----------РЕПЕТА----------------
 
+// 17 - 8  setTimeout ----------РЕПЕТА----------------
+// console.log('До вызова setTimeout');
 
 
+// setTimeout((x) => {
+//     console.log(x);
+// }, 2000, 5);
 
-// /*
-//  * Метод window.setTimeout(callback, delay, args)
-//  */
+// setTimeout((y) => {
+//     console.log(y);
+// }, 1000, 10);
 
-// // console.log('До вызова setTimeout');
-
-// // setTimeout(() => {
-// //   console.log('1 - Внутри callback для setTimeout');
-// // }, 2000);
-
-// // setTimeout(() => {
-// //   console.log('2 - Внутри callback для setTimeout');
-// // }, 1000);
-
-// // console.log('После вызова setTimeout');
+// console.log('После вызова setTimeout');
 
 // /*
 //  * Очистка таймаута с clearTimeout(timeoutId)
@@ -27,7 +22,7 @@
 //     console.log(`Лог через ${time}ms, потому что не отменили таймаут`);
 //   };
   
-//   const timerId = setTimeout(logger, 2000, 2000);
+//  const timerId = setTimeout(logger, 2000, 2000);
   
 //   console.log(timerId);
   
@@ -37,3 +32,33 @@
 //   if (shouldCancelTimer) {
 //     clearTimeout(timerId);
 //   }
+
+// 17 - 8  setInterval ----------РЕПЕТА----------------
+
+/*
+ * Метод setInterval(callback, delay, args)
+ */
+
+// const logger = time => console.log(`Лог каждые ${time}ms - ${Date.now()}`);
+
+// console.log('До вызова setInterval');
+// setInterval(logger, 2000, 2000);
+// console.log('После вызова setInterval');
+
+/*
+ * Очистка интервала с clearInterval(intervalId)
+ */
+
+// const intervalId = setInterval(logger, 2000, 2000);
+// const shouldCancelInterval = Math.random() > 0.3;
+// console.log(shouldCancelInterval);
+
+// if (shouldCancelInterval) {
+//   clearInterval(intervalId);
+// }
+
+
+
+// 17 - 8  setInterval ----------РЕПЕТА----------------
+// 17 - 8  setInterval ----------РЕПЕТА----------------
+// 17 - 8  setInterval ----------РЕПЕТА----------------
