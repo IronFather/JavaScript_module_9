@@ -19,6 +19,7 @@
   "homepage": "https://github.com/IronFather/JavaScript_module_9#readme",
   "devDependencies": {},
   "dependencies": {
+    "bootstrap.native": "^4.2.0",
     "parcel": "^2.8.0"
   }
 }
