@@ -1,6 +1,6 @@
-// 17 - 8 АСИНХРОННОСТЬ ТАЙМЕР ----------РЕПЕТА----------------
+// 17 - 9 АСИНХРОННОСТЬ ТАЙМЕР ----------РЕПЕТА----------------
 
-// 17 - 8  setTimeout ----------РЕПЕТА----------------
+// 17 - 9  setTimeout ----------РЕПЕТА----------------
 // console.log('До вызова setTimeout');
 
 
@@ -37,7 +37,7 @@
 //     clearTimeout(timerId);
 //   }
 
-// 17 - 8  setInterval ----------РЕПЕТА----------------
+// 17 - 9 setInterval ----------РЕПЕТА----------------
 
 /*
  * Метод setInterval(callback, delay, args)
@@ -63,7 +63,7 @@
 
 
 
-// 17 - 8  notification ----------РЕПЕТА----------------
+// 17 - 9  notification ----------РЕПЕТА----------------
 
 /**
  * - Показываем и скрываем добавляя/удаляя класс is-visible
@@ -113,7 +113,7 @@
 //   refs.notification.classList.remove('is-visible');
 // }
 
-// 17 - 8  subscription ----------РЕПЕТА----------------
+// 17 - 9  subscription ----------РЕПЕТА----------------
 
 // const DELAY = 2000;
 // const MAX_MODAL = 3;
@@ -172,7 +172,7 @@
 // }
 
 
-// 17 - 8  date ----------РЕПЕТА----------------
+// 17 - 9  date ----------РЕПЕТА----------------
 
 /*
  - Создание
@@ -230,7 +230,7 @@
 //   console.log(date2 - date1);
 // }, 3000);
 
-// 17 - 8  timer ----------РЕПЕТА----------------
+// 17 - 9  timer ----------РЕПЕТА----------------
 
 // const refs = {
 //   startBtn: document.querySelector('button[data-action-start]'),
@@ -317,5 +317,122 @@
 // }
 
 
-// 17 - 8  date ----------РЕПЕТА----------------
-// 17 - 8  date ----------РЕПЕТА----------------
+// 18 - 9  promise ----------РЕПЕТА----------------
+
+setTimeout(() => {
+  const promise = new Promise((revolve, reject) => {
+  const canFulfill = Math.random() > 0.5;
+
+  if(canFulfill) {
+    revolve(`Промис выполнился успешно, с результатом`); 
+    }
+
+    reject(`Промис выполнился с ошибкой`);
+});
+
+}, 2000);
+
+// promise.then( 
+//   onSuccess => {
+//   console.log(result);
+
+//   onError => {
+//     console.log(error);
+//   };
+// });
+
+// 2 вариант
+promise.then(onSuccess, onError);
+
+// function onSuccess(result) {
+// console.log(onSuccess);
+// console.log(result);
+// }
+
+// function onError(result) {
+//   console.log(onError);
+//   console.log(error);
+//   }
+
+// chain ЦЕПОЧКИ
+
+promise.then( result => {
+  console.log(result);
+
+  return 5;
+})
+.then( x => {
+  console.log(x);
+
+  return 10
+})
+.then(y => {
+  console.log(y);
+});
+
+
+// __________________________________________________
+
+/*
+ * Создание промиса
+ *  - Класс Promise
+ *  - resolve
+ *  - reject
+ *  - Promise.prototype.then(onResolve, onReject)
+ */
+
+// const promise = new Promise((resolve, reject) => {
+//   const canFulfill = Math.random() > 0.5;
+
+//   setTimeout(() => {
+//     if (canFulfill) {
+//       resolve('Промис выполнился успешно, с результатом (исполнен, fulfilled)');
+//     }
+
+//     reject('Промис выполнился с ошибкой (отклонён, rejected)');
+//   }, 1000);
+// });
+
+// promise.then(onFulfilled, onRejected);
+
+// function onFulfilled(result) {
+//   console.log('onFulfilled -> onFulfilled');
+//   console.log(`✅ ${result}`);
+// }
+
+// function onRejected(error) {
+//   console.log('onRejected -> onRejected');
+//   console.log(`❌ ${error}`);
+// }
+
+/*
+ * Цепочки промисов (chaining)
+ * Promise.prototype.catch(error)
+ * Promise.prototype.finally()
+ */
+
+// promise
+//   .then(onFulfilled)
+//   .then(x => {
+//     console.log(x);
+
+//     return 10;
+//   })
+//   .then(y => {
+//     console.log(y);
+//   })
+//   .catch(error => console.log(error))
+//   .finally(() => console.log('Я буду выполнен в любом случае'));
+
+
+
+
+
+
+
+
+
+
+
+
+// 18 - 9  promice ----------РЕПЕТА----------------
